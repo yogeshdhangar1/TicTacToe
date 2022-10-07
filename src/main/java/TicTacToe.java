@@ -42,6 +42,16 @@ public class TicTacToe {
         makeMove();
         System.out.println("Player Moved  :"+position);
     }
+    static Player toss() {
+        if((int)(Math.random()*10)%2==1){
+            System.out.println("\nPlayer Won The Toss! Player Starts");
+            return Player.PLAYER;
+        }
+        else{
+            System.out.println("\nComputer Won The Toss! Computer Starts");
+            return Player.COMPUTER;
+        }
+    }
     public static void main(String[] args) {
         System.out.println("Welcome To Tic Tac Toe Game");
         createBoard(board);
@@ -49,5 +59,6 @@ public class TicTacToe {
         showBoard();
         makeMove();
         playerMove();
+        toss();
     }
 }

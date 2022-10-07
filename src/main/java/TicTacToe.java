@@ -22,10 +22,21 @@ public class TicTacToe {
         System.out.println(" "+ board[4]+"__|"+board[5]+"___|__"+board[6]);
         System.out.println(" "+ board[7]+"  |"+board[8]+"   |"+board[9]);
     }
+    static void makeMove(){
+        int playLocation;
+        System.out.println("Enter The Location Make Move 1 To 9");
+        playLocation = sc.nextInt();
+        if(playLocation < 10 && playLocation>0){
+            board[playLocation] = playerLetter;
+        }else{
+            System.out.println("Invalid Choice");
+        }
+    }
     public static void main(String[] args) {
         System.out.println("Welcome To Tic Tac Toe Game");
         createBoard(board);
         getLetter();
         showBoard();
+        makeMove();
     }
 }

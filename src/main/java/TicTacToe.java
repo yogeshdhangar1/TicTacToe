@@ -17,9 +17,15 @@ public class TicTacToe {
         System.out.println("Your Letter is :"+playerLetter);
         System.out.println("Your Letter is :"+computerLetter);
     }
+    static void showBoard(){
+        System.out.println(" "+ board[1]+"__|"+board[2]+"___|__"+board[3]);
+        System.out.println(" "+ board[4]+"__|"+board[5]+"___|__"+board[6]);
+        System.out.println(" "+ board[7]+"  |"+board[8]+"   |"+board[9]);
+    }
     public static void main(String[] args) {
         System.out.println("Welcome To Tic Tac Toe Game");
         createBoard(board);
         getLetter();
+        showBoard();
     }
 }

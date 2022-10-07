@@ -32,11 +32,22 @@ public class TicTacToe {
             System.out.println("Invalid Choice");
         }
     }
+    static void playerMove() {
+        System.out.println("Enter choice 1 to 9");
+        int position = sc.nextInt();
+        while (board[position] != ' ') {
+            System.out.println("Invalid option!! Please Try Again");
+            position = sc.nextInt();
+        }
+        makeMove();
+        System.out.println("Player Moved  :"+position);
+    }
     public static void main(String[] args) {
         System.out.println("Welcome To Tic Tac Toe Game");
         createBoard(board);
         getLetter();
         showBoard();
         makeMove();
+        playerMove();
     }
 }
